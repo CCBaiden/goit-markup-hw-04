@@ -368,6 +368,18 @@ a {
   overflow: hidden;
 }
 
+.portfolio-heading {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+  margin-bottom: 72px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+
 .portfolio-paragraph {
   font-size: 16px;
   line-height: 1.5;
