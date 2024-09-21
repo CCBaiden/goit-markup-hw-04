@@ -41,7 +41,6 @@ a {
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
- 
 
 .header-container {
   display: flex;
@@ -98,7 +97,16 @@ a {
   position: relative;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+.menu-studio::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 4px;
+  background-color: #404bbf;
+  border-radius: 2px;
+}
 .menu-link:hover,
 .menu-link:focus {
   color: #404bbf;
@@ -129,7 +137,7 @@ a {
 .section-one {
   background-color: #2e2f42;
   padding: 188px 0;
-    background-image: linear-gradient(
+  background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
@@ -142,7 +150,6 @@ a {
   box-shadow: 10px 10px 8px 2px rgba(0, 0, 0, 0.3);
   margin: 0 auto;
 }
-
 
 .hero-heading {
   font-weight: 700;
@@ -171,6 +178,9 @@ a {
   border: none;
   margin: 48px auto 0;
   padding: 16px 32px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 1;
 }
 
 .hero-button:hover,
@@ -218,6 +228,17 @@ a {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 112px;
+  background-color: #f4f4fd;
+  border-radius: 4px;
+  border: 1px solid #8e8f99;
+  margin-bottom: 8px;
 }
 .section-our-team {
   background-color: #f4f4fd;
@@ -310,12 +331,20 @@ a {
 .portfolio-case {
   width: 360px;
   height: 420px;
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-case:hover .overlay {
+  transform: translateY(0%);
 }
 
 .portfolio-container {
   padding: 32px 16px;
   border: 1px solid #e7e9fc;
   border-top: none;
+  position: relative;
+  overflow: hidden;
 }
 
 .portfolio-paragraph {
