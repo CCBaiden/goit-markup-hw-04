@@ -319,6 +319,17 @@ a {
   box-sizing: border-box;
 }
 
+team .social-link{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .member-info {
   padding: 32px 0;
   width: 264;
