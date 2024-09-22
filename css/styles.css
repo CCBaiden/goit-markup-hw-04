@@ -230,7 +230,7 @@ a {
   color: #434455;
 }
 
-.icons {
+.icon-container {
   display: flex;
   align-items: center;
   justify-content: center;
