@@ -324,13 +324,7 @@ a {
   margin-top: 8px;
   margin-bottom: 8px;
 }
-.ourteam-info {
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  text-align: center;
-  color: #434455;
-}
+
 
 .social-item {
   width: 40px;
@@ -388,7 +382,7 @@ team .social-link{
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.72px;
   color: #2e2f42;
   margin-bottom: 72px;
   text-align: center;
@@ -416,16 +410,16 @@ team .social-link{
   flex-wrap: wrap;
   column-gap: 24px;
   row-gap: 48px;
-  margin-bottom: 120px;
 }
 
 .portfolio-case {
-  width: 360px;
-  height: 420px;
-  position: relative;
+ background-color: #fff;
+  border: 1px solid #e7e9fc;
+  width: calc((100% - 48px) / 3);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
 }
-
+ 
 .portfolio-case:hover .overlay {
   transform: translateY(0%);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
@@ -452,6 +446,7 @@ team .social-link{
   color: #f4f4fd;
   padding: 40px 32px;
   font-size: 16px;
+  font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0.02em;
   transform: translateY(100%);
@@ -477,15 +472,28 @@ team .social-link{
   text-transform: capitalize;
 }
 
+.portfolio-app {
+  color: #2e2f42;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2; /* 120% */
+  letter-spacing: 0.4px;
+  margin-bottom: 8px;
+}
+
 .portfolio-paragraph {
   font-size: 16px;
+  font-weight: 400;
   line-height: 1.5;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.32px;
   color: #434455;
 }
 
 .footer {
   background-color: #2e2f42;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   padding: 100px 0;
 }
 
@@ -494,7 +502,6 @@ team .social-link{
 }
 
 .footer-logo {
-  display: inline-block;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 18px;
@@ -507,15 +514,35 @@ team .social-link{
 
 .footer-description {
   font-size: 16px;
+  font-weight: 400;
   line-height: 1.5;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.32px;
   color: #f4f4fd;
   max-width: 264px;
 }
 .footer-container {
   display: flex;
-  justify-content: flex-start;
-  align-items: baseline;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-basis: 50%;
+}
+
+footer-container-second {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-basis: 50%;
+  margin-left: 120px;
+}
+
+.footer-container,
+.footer-container-second {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .social-media-title {
@@ -533,8 +560,12 @@ team .social-link{
 }
 
 .social-media-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 40px;
   height: 40px;
+  border-radius: 4px;
 }
 
 .social-media-link {
