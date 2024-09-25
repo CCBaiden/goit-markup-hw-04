@@ -30,8 +30,7 @@ ul {
 h1,
 h2,
 h3,
-p,
-{
+p {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -112,15 +111,19 @@ a {
 }
 
 .header-nav-list-item > .header-nav-list-item-link::after {
-  content: '';
+  content: "";
+  display: block;
   position: absolute;
-  bottom: -1px;
+  bottom: 0;
   left: 0;
   width: 100%;
   height: 4px;
   border-radius: 2px;
   background-color: #404bbf;
+  transform: scaleX(0);
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .header-nav-list-item-link {
   color: #2e2f42;
   font-size: 16px;
@@ -139,35 +142,11 @@ a {
   color: #404bbf;
 }
 
-/* need  uncomment in the future */
-/* .header-nav-list-item-link {
-  color: #2e2f42;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.32px;
-  position: relative;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.header-nav-list-item-link:hover::after,
+.header-nav-list-item-link:focus::after,
+.header-nav-list-item-link.active::after {
+  transform: scaleX(1);
 }
-
-.header-nav-list-item-link:hover {
-  color: #404bbf;
-}
-
-.header-nav-list-item-link:focus {
-  color: #404bbf;
-}
-
-.header-nav-list-item-link:active:after {
-  content: '';
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: #404bbf;
-} */
 
 /* Header padding to calculate container haight  */
 .header-nav-list-item-link,
@@ -328,6 +307,19 @@ address {
   padding: 120px 0;
 }
 
+.section-our-team .member {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-our-team .member img {
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.section-our-team .member:hover img {
+  transform: scale(1.1);
+}
+
 .team-heading {
   font-size: 36px;
   line-height: 1.11;
@@ -394,11 +386,13 @@ address {
   height: 100%;
   background-color: var(--color1, #4d5ae5);
   border-radius: 50%;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   width: 100%;
   height: 100%;
   border-radius: 50%;
 }
+
+
 *,
 ::after,
 ::before {
@@ -420,7 +414,15 @@ team .social-link {
   padding: 32px 0;
   width: 264;
   height: 426;
+  transition: box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.section-our-team .member:hover .member-info {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+
 .section-four {
   padding-top: 120px 0;
   padding-bottom: 120px;
@@ -551,7 +553,7 @@ team .social-link {
 .footer-logo-first-part {
   display: inline-block;
   color: #4d5ae5;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 1.17;
@@ -566,7 +568,7 @@ team .social-link {
 
 .footer-logo-second-part {
   color: #f4f4fd;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 1.17;
@@ -624,4 +626,9 @@ team .social-link {
 
 .footer-social-link {
   fill: var(--foo-icon-fill-color);
+}
+
+.portfolio-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
