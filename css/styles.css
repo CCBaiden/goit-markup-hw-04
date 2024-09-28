@@ -392,7 +392,6 @@ address {
   border-radius: 50%;
 }
 
-
 *,
 ::after,
 ::before {
@@ -420,8 +419,6 @@ team .social-link {
 .section-our-team .member:hover .member-info {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
-
-
 
 .section-four {
   padding-top: 120px 0;
@@ -464,16 +461,22 @@ team .social-link {
 
 .portfolio-case {
   background-color: #fff;
-  border: 1px solid #e7e9fc;
   width: calc((100% - 48px) / 3);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
 }
 
+.portfolio-container:hover {
+  border: 1px solid #f4f4fd;
+  background-color: #fff;
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+  cursor: pointer;
+}
+
 .portfolio-case:hover .overlay {
   transform: translateY(0%);
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -509,6 +512,7 @@ team .social-link {
   border-top: none;
   position: relative;
   overflow: hidden;
+  margin-bottom: 120px;
 }
 
 .portfolio-heading {
